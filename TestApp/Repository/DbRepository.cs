@@ -27,7 +27,7 @@ namespace TestApp.Repository
 
         public List<User> GetUserById(int id)
         {
-            var user = _context.Users.Include(z => z.UserPermissions).ThenInclude(y => y.Permissions).Where(x => x.Id == id).ToList();
+            var user = _context.Users.Include(z => z.UserPermissions).ThenInclude(y => y.Permissions).Where(x => x.UserId == id).ToList();
             return user;
         }
 
@@ -35,7 +35,7 @@ namespace TestApp.Repository
         {
             var usr = new User
             {
-                Id = user.Id,
+                UserId = user.UserId,
                 Name = user.Name,
                 Email = user.Email,
                 Login = user.Login,
@@ -48,7 +48,7 @@ namespace TestApp.Repository
         public void UpdateUser(User user)
         {
             User usr = new User();
-            usr = _context.Users.Where(x => x.Id == user.Id).FirstOrDefault();
+            usr = _context.Users.Where(x => x.UserId == user.UserId).FirstOrDefault();
             if (usr != null)
             {
                 usr.Name = user.Name;
@@ -60,7 +60,7 @@ namespace TestApp.Repository
 
         public void DeleteUser(int id)
         {
-            var user = _context.Users.Where(x => x.Id.Equals(id)).FirstOrDefault();
+            var user = _context.Users.Where(x => x.UserId.Equals(id)).FirstOrDefault();
             if(user != null)
             {
                 _context.Users.Remove(user);
