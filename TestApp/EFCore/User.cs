@@ -7,6 +7,7 @@ namespace TestApp.EFCore
     public class User
     {
         [Key, Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Login { get; set; }
         [DataType(DataType.Text)]

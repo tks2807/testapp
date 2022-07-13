@@ -33,9 +33,10 @@ C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\Microsoft.EntityFram
 C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\Npgsql.dll
 C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\UI\testapp\angular.json
-C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\UI\testapp\package-lock.json
-C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\UI\testapp\package.json
-C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\UI\testapp\tsconfig.app.json
-C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\UI\testapp\tsconfig.json
-C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\UI\testapp\tsconfig.spec.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\ClientApp\angular.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\ClientApp\package-lock.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\ClientApp\package.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\ClientApp\tsconfig.app.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\ClientApp\tsconfig.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\ClientApp\tsconfig.spec.json
+C:\Users\User\source\repos\TestApp\TestApp\bin\Debug\net6.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
