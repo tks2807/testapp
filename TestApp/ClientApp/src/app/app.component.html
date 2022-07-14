@@ -1,0 +1,75 @@
+<input type="button" value="Add" class="btn btn-default" (click)="add()" />
+<table *ngIf="tableMode; else create" class="table table-striped">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Login</td>
+      <td>Email</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <ng-template [ngIf]="user?.UserId == u.UserId" [ngIfElse]="edit">
+        <td>{{u?.UserId}}</td>
+        <td>{{u?.Name}}</td>
+        <td>{{u?.Login}}</td>
+        <td>{{u?.Email}}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="editUser(u)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="delete(u)">Delete</button>
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>
+
+
+<ng-template #edit>
+  <td>
+    <input type="text" [(ngModel)]="user.Name" class="form-control" />
+  </td>
+  <td>
+    <input type="text" [(ngModel)]="user.Login" class="form-control" />
+  </td>
+  <td>
+    <input type="email" [(ngModel)]="user.Email" class="form-control" />
+  </td>
+  <td>
+    <input type="button" value="Save" (click)="save()" class="btn btn-sm btn-success" />
+    <input type="button" value="Cancel" (click)="cancel()" class="btn btn-sm btn-warning" />
+  </td>
+</ng-template>
+
+
+<ng-template #create>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="user.Name" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Login</label>
+    <input type="text" [(ngModel)]="user.Login" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" [(ngModel)]="user.Email" class="form-control" />
+  </div>
+  <div>
+    <input type="button" value="Save" (click)="save()" class="btn btn-success" />
+    <input type="button" value="Cancel" (click)="cancel()" class="btn btn-warning" />
+  </div>
+</ng-template>
+
+
+<div class="form-group">
+  <label>UserId</label>
+  <input type="number" [(ngModel)]="up.UserId" class="form-control" />
+</div>
+<div class="form-group">
+  <label>PermissionId</label>
+  <input type="number" [(ngModel)]="up.PermissionId" class="form-control" />
+</div>
+  <input type="button" value="Save" (click)="assign()" class="btn btn-success" />
+
